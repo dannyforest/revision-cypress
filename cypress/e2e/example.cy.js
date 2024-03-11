@@ -195,7 +195,7 @@ describe('My First Test', () => {
   })
 
   describe('Enlever un item du panier', () => {
-    it.only('should remove the item from the cart', () => {
+    it('should remove the item from the cart', () => {
       const reservationButton = '#menu-item-78896 > [href="#"]';
       cy.get(reservationButton).trigger('mouseover');
       cy.get('#menu-item-78895').click({force: true}); // TODO: do not trigger every time
