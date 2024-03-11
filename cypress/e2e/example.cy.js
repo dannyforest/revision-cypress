@@ -20,14 +20,14 @@ describe('My First Test', () => {
     it('should not create an account if email field is empty', () => {
       // cy.wait(1000);
       const reservationButton = '#menu-item-78896 > [href="#"]';
-      // cy.get(reservationButton).trigger('mouseover');
-      cy.get(reservationButton)
-          .trigger('mouseover')
-          .find('#menu-item-78890')
-          .contains('Mon compte')
-          .click();
+      cy.get(reservationButton).trigger('mouseover');
+      // cy.get(reservationButton)
+      //     .trigger('mouseover')
+      //     .find('#menu-item-78890')
+      //     .contains('Mon compte')
+      //     .click();
       // cy.wait(1000);
-      // cy.get('#menu-item-78890').click({force: true}); // TODO: do not trigger every time
+      cy.get('#menu-item-78890').click({force: true}); // TODO: do not trigger every time
       cy.visit('https://idealcoworking.com/mon-compte/')
       cy.url().should('contain', 'mon-compte');
 
